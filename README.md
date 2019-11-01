@@ -1,6 +1,6 @@
 # occ
 
-occ is a cli vpn tool (currently only supporting openconnect) which helps in several ways
+occ stands for openconnect-connector and is a cli vpn tool (currently only supporting openconnect) which helps in several ways
 </br>
 ## Features
 * ### Save your time
@@ -10,7 +10,7 @@ occ is a cli vpn tool (currently only supporting openconnect) which helps in sev
 * ### Make things easy
   - Wrap openconnect cert check so **you won't get troubled with a non-trusted cert-signature**
   - Short commandline arguments
-  - Save all vpn servers available for you and **let occ choose one of them randomly** when you're not sure which one to connect
+  - Save all vpn servers available (vpnlist) and **let occ choose one of them randomly** when you're not sure which one to connect
   </br>
 * ### Connect to the best server
   - Possibility to **run a ping test on all available vpn servers** and choose the best one to connect
@@ -29,9 +29,9 @@ occ is a cli vpn tool (currently only supporting openconnect) which helps in sev
     - cd into occ directory (`cd occ`) then run `chmod +x install.sh && ./install.sh`
 * ### Usage
   - Don't worry. occ has a **detailed and interactive cli**. Outputs make everything clear for you.
-  - Just try one of the following to get started using occ:
+  - Just try one of the following to get started with occ:
     - `occ vpndata`
-      - You may connect to a specific server using first format `occ <server-prefix>` next.
+      - You could connect to a specific server using first format `occ <server-prefix>` next.
     - `occ vpnlist`
       - It'll open a file where you should put vpn servers' urls to use `occ best` and `occ rand` afterwards.
   - You may disconnect any time running `occ d`.
