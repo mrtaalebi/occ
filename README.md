@@ -3,16 +3,16 @@
 occ is a cli vpn tool (currently only supporting openconnect) which helps in several ways
 </br>
 ## Features
-* ### Save your time by
+* ### Save your time
   - **Saving username and password** so you don't have to enter them every time you try to connect to a vpn server
   - Separating urls into two parts, so you'll **never type the common part of vpnservers' urls** which is the same among all of them (server_postfix) and just type the first part (server_prefix) which is usually shorter
   </br>
-* ### Make things easy by
+* ### Make things easy
   - Wrap openconnect cert check so **you won't get troubled with a non-trusted cert-signature**
   - Short commandline arguments
   - Save all vpn servers available for you and **let occ choose one of them randomly** when you're not sure which one to connect
   </br>
-* ### Connect to the best server by
+* ### Connect to the best server
   - Possibility to **run a ping test on all available vpn servers** and choose the best one to connect
     - *let me know your ideas about how else could occ detect the best vpn server*
   </br>
