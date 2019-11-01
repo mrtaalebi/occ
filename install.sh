@@ -15,8 +15,8 @@ done
 
 git_inst=0
 openconnect_inst=0
-[ $(git --version | grep -Eciq 'version') = 0 ] && git_inst=1
-[ $(openconnect --version | grep -Eciq 'version') = 0 ] && openconnect_inst=1
+[ $(git --version | grep -Eci 'version') = 0 ] && git_inst=1
+[ $(openconnect --version | grep -Eci 'version') = 0 ] && openconnect_inst=1
 
 if [ $git_inst = 1 || $openconnect_inst = 1 ]; then
     if [ -z $package_manager ]; then
