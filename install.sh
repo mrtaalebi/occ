@@ -13,7 +13,8 @@ do
     fi
 done
 
-${package_manager} git openconnect
+${package_manager} git
+${package_manager} openconnect
 
 
 git clone https://github.com/mrtaalebi/occ
@@ -21,9 +22,11 @@ cd occ
 
 copy_to=/usr/bin/occ
 if  [ -f $copy_to ] || [ -d $copy_to ]; then
+    echo
     echo "a file or directory named occ already exists in $copy_to."
     echo "try checking and removing it before running installation script again."
-    echo "exiting."
+    echo "ABORTING INSTALLATION."
+    echo
     exit 1
 fi
 
