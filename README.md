@@ -21,9 +21,9 @@ occ is a cli vpn tool (currently only supporting openconnect) which helps in sev
 * ### Installation: you may choose one of the following methods
   - First method(automatic):
     - using curl:
-      `sh -c "$(curl -fsSL https://bit.ly/2NyCtF8)"`
+      `sh -c "$(curl -fsSL https://raw.githubusercontent.com/mrtaalebi/occ/master/install.sh)"`
     - using wget:
-      `sh -c "$(wget -O- https://bit.ly/2NyCtF8)"`
+      `sh -c "$(wget -O- https://raw.githubusercontent.com/mrtaalebi/occ/master/install.sh)"`
   - Second method(manual):
     - clone this repository by `git clone https://github.com/mrtaalebi/occ`
     - cd into occ directory (`cd occ`) then run `chmod +x install.sh && ./install.sh`
