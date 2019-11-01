@@ -13,8 +13,22 @@ do
     fi
 done
 
-${package_manager} git
-${package_manager} openconnect
+git_inst=0
+openconnect_inst=0
+[ $(git --version | grep -Eciq 'version') = 0 ] && git_inst=1
+[ $(openconnect --version | grep -Eciq 'version') = 0 ] && openconnect_inst=1
+
+if [ $git_inst = 1 || $openconnect_inst = 1 ]; then
+    if [ -z $package_manager ]; then
+        echo "unknown linux distro".
+        echo "try installing git and openconnect with your package manager"
+        echo "then run ./install.sh"
+        echo "exiting."
+        exit
+    fi
+    [ git_intst = 1 ] && $package_manager git
+    [ openconnect_inst = 1 ] && $package_manager openconnect
+fi
 
 
 git clone https://github.com/mrtaalebi/occ
