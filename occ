@@ -130,9 +130,9 @@ connect() {
     grep_awk "username" && username=$gal
     grep_awk "password" && password=$gal
 
-    echo $password | sudo openconnect -b $1 -u $username &> out
+    echo $password | sudo openconnect -b -u $username $1 &> out
     cert=$(grep "servercert" out | head -1)
-    ! [ -z "$cert" ] && echo $password | sudo openconnect -b $1$domain -u $username $cert &> out
+    ! [ -z "$cert" ] && echo $password | sudo openconnect -b -u $username $cert $1 &> out
     cat out
     rm out
 }
@@ -147,7 +147,8 @@ connect_specific() {
     disconnect
     [ ! -f $config_file ] && save_vpn_data
     grep_awk "domain" && domain=$gal
-    ! [ -z $domain ] && domain=.$domain
+    ! [ -z $domain ] && domain=$1.$domain
+    [ -z $domain ] && domain=$1
     connect $domain
 }
 
