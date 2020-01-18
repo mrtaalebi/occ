@@ -62,7 +62,7 @@ validate_vpnlist() {
     while IFS= read -r line;
     do
         i=$((i + 1))
-        if ! [ `echo $line | grep -Ec '^((http|https):\/\/)?(\w+\.)+\w+(:\d{1,5})?$'` = 1 ]
+        if ! [ `echo $line | grep -Ec '^((http|https):\/\/)?(\w+\.)+\w+(:[0-9]{1,5})?$'` = 1 ]
         then
             echo "    invalid vpnlist format in line $i"
             echo "        $line"
