@@ -34,7 +34,7 @@ fi
 git clone https://github.com/mrtaalebi/occ
 cd occ
 
-copy_to=/usr/bin/occ
+copy_to=/usr/local/bin/occ
 if  [ -f $copy_to ] || [ -d $copy_to ]; then
     echo
     echo "a file or directory named occ already exists in $copy_to."
@@ -45,7 +45,7 @@ if  [ -f $copy_to ] || [ -d $copy_to ]; then
 fi
 
 sudo cp occ $copy_to
-sudo chmod +x /usr/bin/occ
+sudo chmod +x $copy_to
 cd ..
 rm -rf occ
 
